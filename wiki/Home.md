@@ -1,6 +1,6 @@
 _This document is intended to be a guide on how the modular architecture works. It is highly inspired by the [Uber RIBs](https://github.com/uber/RIBs/wiki) architecture._
 
-If you want to go straight to the tutorials you can [get started](https://github.com/dchohfi/ios-module-architecture/blob/master/wiki/Tutorial1.md)here.
+If you want to go straight to the tutorials you can [get started](https://github.com/dchohfi/ios-module-architecture/blob/master/wiki/Tutorial1.md) here.
 
 # Overview
 
