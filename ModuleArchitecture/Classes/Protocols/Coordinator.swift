@@ -7,6 +7,10 @@ public protocol CoordinatorType: AnyObject {
 
 public protocol ReusableCoordinatorType: CoordinatorType {
 
+    associatedtype Content
+
+    var viewController: ViewControllerType { get }
+    func update(with content: Content)
     func prepareForReuse()
 }
 

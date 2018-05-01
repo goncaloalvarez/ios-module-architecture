@@ -29,6 +29,14 @@ extension Collection where Element == ViewControllerType {
     }
 }
 
+extension UIViewController: ViewControllerType {
+
+    public func asViewController() -> UIViewController {
+
+        return self
+    }
+}
+
 extension UINavigationController: ViewControllerType {
 
     public convenience init(viewControllerType: ViewControllerType) {
