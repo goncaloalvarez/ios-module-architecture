@@ -5,13 +5,17 @@ public protocol CoordinatorType: AnyObject {
     func detach(_ child: CoordinatorType)
 }
 
-public protocol ReusableCoordinatorType: CoordinatorType {
+public protocol ReusableType {
+
+    func prepareForReuse()
+}
+
+public protocol ReusableCoordinatorType: CoordinatorType, ReusableType {
 
     associatedtype Content
 
     var viewController: ViewControllerType { get }
     func update(with content: Content)
-    func prepareForReuse()
 }
 
 open class Coordinator<Presentable>: CoordinatorType {
