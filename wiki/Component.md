@@ -1,6 +1,6 @@
 # A Plain UIViewController
 
-We will get started with a project that has already been set up with the project structure described in the [previous section](https://github.com/dchohfi/ios-module-architecture/blob/master/wiki/Home.md).
+We will get started with a simple iOS project to focus on the individual layers of a `Module`.
 
 Our goal is to create a login flow and we will start with a plain `UIViewController` subclass.
 
@@ -15,12 +15,13 @@ The first thing we need to have in mind is that our view controllers are some of
 
 Just to name a few. In a complex environment, only those responsibilities are enough to fill our view controllers with a lot of code. Thinking about that, it seems a good idea to move things away from them whenever we can. 
 
-The first thing we could detatch would be the pure visual objects that are living inside them. All buttons, labels, table views and input fields that compose a screen could live inside another `UIView` subclass that would bind them all together. Here we present the first box of our `Module`:
+The first thing we could do is detach the pure visual objects that are living inside them. All buttons, labels, table views and input fields that compose a screen could live inside another `UIView` subclass that would bind them all together. Here we present the first box of our `Module`:
 
 # Component
 
-- **TODO** - component description
-- **TODO** - `Configuration` description
+- A Component can be described as a pure visual composition of view objects (UIView, NSView, etc) or it's subclasses, including other components. It defines the arrangement of all children visual objects.
+
+- Components should have their sate changed via `Configuration` objects. These objects should fully define every visual and content property of the component, from background colors to attributed strings for every label.
 
 # Advantages
 
