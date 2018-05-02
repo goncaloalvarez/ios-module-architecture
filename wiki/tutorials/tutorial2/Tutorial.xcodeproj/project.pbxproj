@@ -12,6 +12,9 @@
 		63DE18A1209A096800943125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DE189A209A096700943125 /* LaunchScreen.storyboard */; };
 		63DE18A3209A096800943125 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE189E209A096700943125 /* LoginViewController.swift */; };
 		63DE18A4209A096800943125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE189F209A096700943125 /* AppDelegate.swift */; };
+		63DE18A7209A29C100943125 /* LoginComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE18A6209A29C100943125 /* LoginComponent.swift */; };
+		63DE18A9209A2B4700943125 /* LoginConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE18A8209A2B4700943125 /* LoginConfiguration.swift */; };
+		63DE18AC209A2C1B00943125 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE18AB209A2C1B00943125 /* User.swift */; };
 		7EA62EAE750A43C33DCFA78C /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB5725D0C51083CA67A55BE /* Pods_Tutorial.framework */; };
 		E320A9395C16250930DAB733 /* Pods_TutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBCE1972C4E7DCF86D4FC10 /* Pods_TutorialTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		63DE189C209A096700943125 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DE189E209A096700943125 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63DE189F209A096700943125 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63DE18A6209A29C100943125 /* LoginComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponent.swift; sourceTree = "<group>"; };
+		63DE18A8209A2B4700943125 /* LoginConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfiguration.swift; sourceTree = "<group>"; };
+		63DE18AB209A2C1B00943125 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6789DE000ABFEDCBE8A81E1F /* Pods-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tutorial/Pods-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		6FBCE1972C4E7DCF86D4FC10 /* Pods_TutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C8D4CC30CA0773DE0775B9 /* Pods-Tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tutorial/Pods-Tutorial.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				63DE189F209A096700943125 /* AppDelegate.swift */,
+				63DE18AA209A2C1200943125 /* Models */,
 				63DE18A5209A09DA00943125 /* Login */,
 			);
 			path = Classes;
@@ -124,9 +131,19 @@
 		63DE18A5209A09DA00943125 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				63DE18A6209A29C100943125 /* LoginComponent.swift */,
+				63DE18A8209A2B4700943125 /* LoginConfiguration.swift */,
 				63DE189E209A096700943125 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		63DE18AA209A2C1200943125 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63DE18AB209A2C1B00943125 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A6F64DA3EBC13CB8851539DE /* Pods */ = {
@@ -357,8 +374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DE18A9209A2B4700943125 /* LoginConfiguration.swift in Sources */,
 				63DE18A4209A096800943125 /* AppDelegate.swift in Sources */,
 				63DE18A3209A096800943125 /* LoginViewController.swift in Sources */,
+				63DE18AC209A2C1B00943125 /* User.swift in Sources */,
+				63DE18A7209A29C100943125 /* LoginComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

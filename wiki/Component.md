@@ -23,17 +23,21 @@ The first thing we could do is detach the pure visual objects that are living in
 
 - Components should have their sate changed via `Configuration` objects. These objects should fully define every visual and content property of the component, from background colors to attributed strings for every label.
 
+It's important to notice that `Configuration` objects usually contain mutable content, stuff that needs to change in different usages of that `Compoenent`. Static information can live inside the `Component` until it comes the need to extract it to a configuration object.
+
 # Advantages
 
 The component approach makes view controllers lighter, free to have the code they inherited from the iOS ecosystem. 
 
 They also enhance our testing capabilities. Since the component is not tied to the iOS lifecycle, we do not need to worry about wheater or not it has been loaded, and other sources of headaches when testing view controllers directly. We can just instantiate the component, udpate it's state and take a snapshot. Simple as that.
 
-Lastly they make accessible only the properties that need to be public (maybe none, with the `Configuration` approach), enhancing the [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science)) of our implementation.
+The usage of configuration objects to mutate the sate of the component also allows snapshots of those different states.
+
+Lastly components make accessible only the properties that need to be public (maybe none, with the `Configuration` approach), enhancing the [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science)) of our implementation.
 
 In summary:
 
 - Lighter view controllers
-- Visual state changes via component object
+- Visual state changes via configuration object
 - Better testability
 - Higher cohesion
