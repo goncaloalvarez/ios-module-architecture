@@ -1,16 +1,12 @@
+import UIKit
 /*:
  # A Plain UIViewController
 
  We will get started with a simple Login screen with a plain old `UIViewController` subclass.
  */
-
-import UIKit
-
 let viewController = LoginViewController()
 viewController.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
-
 /*:
-
  The first thing we need to have in mind is that our view controllers are some of the classes most tied to the [iOS ecosystem](https://developer.apple.com/documentation/uikit/uiviewcontroller). They contain methods for handling:
 
  - Screen rotation
@@ -22,6 +18,7 @@ viewController.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
 
  The first thing we could do is detach the pure visual objects that are living inside them. All buttons, labels, table views and input fields that compose a screen could live inside another `UIView` subclass that would bind them all together. Here we present the first box of our `Module`:
 
+
  # Component
 
  - A Component can be described as a pure visual composition of view objects (UIView, NSView, etc) or it's subclasses, including other components. It defines the arrangement of all children visual objects.
@@ -29,6 +26,7 @@ viewController.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
  - Components should have their sate changed via `Configuration` objects. These objects should fully define every visual and content property of the component, from background colors to attributed strings for every label.
 
  It's important to notice that `Configuration` objects usually contain mutable content, stuff that needs to change in different usages of that `Compoenent`. Static information can live inside the `Component` until it comes the need to extract it to a configuration object.
+
 
  # Advantages
 
@@ -40,10 +38,14 @@ viewController.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
 
  Lastly components make accessible only the properties that need to be public (maybe none, with the `Configuration` approach), enhancing the [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science)) of our implementation.
 
- In summary:
+
+ # In summary:
 
  - Lighter view controllers
  - Visual state changes via configuration object
  - Better testability
  - Higher cohesion
  */
+
+let viewControllerWithComponent = LoginViewControllerWithComponent()
+viewControllerWithComponent.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)

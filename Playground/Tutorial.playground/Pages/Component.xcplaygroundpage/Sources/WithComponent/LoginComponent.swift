@@ -1,15 +1,19 @@
 import UIKit
 import SnapKit
-import ModuleArchitecture
 
-public final class LoginViewController: UIViewController {
+protocol LoginComponentDelegate: AnyObject {
+
+    func didSubmitLoginForm(email: String?, password: String?)
+}
+
+final class LoginComponent: UIView {
+
+    weak var delegate: LoginComponentDelegate?
 
     private let titleLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "BRAND"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 40, weight: .light)
         return label
     }()
 
@@ -31,7 +35,6 @@ public final class LoginViewController: UIViewController {
     private let submitButton: UIButton = {
 
         let button = UIButton()
-        button.setTitleColor(.white, for: .normal)
         button.setTitle("Submit", for: .normal)
         button.backgroundColor = .black
         button.addTarget(self, action: #selector(submit), for: .touchUpInside)
@@ -48,23 +51,32 @@ public final class LoginViewController: UIViewController {
         return stackview
     }()
 
-    public override func viewDidLoad() {
-
-        super.viewDidLoad()
-        self.view.backgroundColor = .white
+    init() {
+        
+        super.init(frame: .zero)
         self.customizeInterface()
     }
 
-    @objc func submit() {
+    required init?(coder aDecoder: NSCoder) { fatalError("Not implemented") }
 
-        print("submit button tapped")
+    func render(configuration: LoginConfiguration) {
+        
+        self.titleLabel.attributedText = configuration.title
+        self.emailTextField.text = configuration.email
+        self.passwordTextField.text = configuration.email
+    }
+
+    @objc private func submit() {
+
+        self.delegate?.didSubmitLoginForm(email: self.emailTextField.text, password: self.passwordTextField.text)
     }
 }
 
-extension LoginViewController {
+extension LoginComponent {
 
     private func customizeInterface() {
 
+        self.backgroundColor = .white
         self.addSubviews()
         self.addConstraints()
     }
@@ -76,7 +88,7 @@ extension LoginViewController {
         self.containerStackview.addArrangedSubview(self.passwordTextField)
         self.containerStackview.addArrangedSubview(self.submitButton)
 
-        self.view.addSubview(self.containerStackview)
+        self.addSubview(self.containerStackview)
     }
 
     private func addConstraints() {
