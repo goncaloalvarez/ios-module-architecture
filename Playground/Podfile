@@ -6,5 +6,6 @@ target 'Tutorial' do
   use_frameworks!
 
   pod 'ModuleArchitecture', :path => '../ModuleArchitecture.podspec'
+  pod 'SnapKit'
 
 end

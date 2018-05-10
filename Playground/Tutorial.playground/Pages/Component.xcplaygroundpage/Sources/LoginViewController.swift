@@ -1,7 +1,8 @@
 import UIKit
 import SnapKit
+import ModuleArchitecture
 
-final class LoginViewController: UIViewController {
+public final class LoginViewController: UIViewController {
 
     private let titleLabel: UILabel = {
 
@@ -47,7 +48,7 @@ final class LoginViewController: UIViewController {
         return stackview
     }()
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
 
         super.viewDidLoad()
         self.view.backgroundColor = .white

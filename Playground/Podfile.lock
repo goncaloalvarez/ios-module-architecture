@@ -1,8 +1,10 @@
 PODS:
   - ModuleArchitecture (0.11.0)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - ModuleArchitecture (from `../ModuleArchitecture.podspec`)
+  - SnapKit
 
 EXTERNAL SOURCES:
   ModuleArchitecture:
@@ -10,7 +12,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ModuleArchitecture: 49b77eadbb01be7b1dded3f7b61e062ec51bf284
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: f8250e86952fe9fb988ce1e124c25430e6442e82
+PODFILE CHECKSUM: ee4caa6f83eb2abaf7fd34715ff0ce53b1a6c4e5
 
 COCOAPODS: 1.4.0
