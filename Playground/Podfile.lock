@@ -1,0 +1,16 @@
+PODS:
+  - ModuleArchitecture (0.11.0)
+
+DEPENDENCIES:
+  - ModuleArchitecture (from `../ModuleArchitecture.podspec`)
+
+EXTERNAL SOURCES:
+  ModuleArchitecture:
+    :path: ../ModuleArchitecture.podspec
+
+SPEC CHECKSUMS:
+  ModuleArchitecture: 49b77eadbb01be7b1dded3f7b61e062ec51bf284
+
+PODFILE CHECKSUM: f8250e86952fe9fb988ce1e124c25430e6442e82
+
+COCOAPODS: 1.4.0
