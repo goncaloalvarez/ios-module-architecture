@@ -5,7 +5,7 @@ import UIKit
  We will get started with a simple Login screen with a plain old `UIViewController` subclass.
  */
 let viewController = LoginViewController()
-viewController.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
+viewController.view.frame = iPhone7Size
 /*:
  The first thing we need to have in mind is that our view controllers are some of the classes most tied to the [iOS ecosystem](https://developer.apple.com/documentation/uikit/uiviewcontroller). They contain methods for handling:
 
@@ -48,4 +48,4 @@ viewController.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
  */
 
 let viewControllerWithComponent = LoginViewControllerWithComponent()
-viewControllerWithComponent.view.frame = CGRect(x: 0, y: 0, width: 370, height: 657)
+viewControllerWithComponent.view.frame = iPhone7Size

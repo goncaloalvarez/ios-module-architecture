@@ -30,7 +30,7 @@
 
  # Module Units
 
- - **TODO** - get from architecture docs
+ ![Module Architecture](ModuleArchitecture.png "Module Architecture")
 
  # Tutorials
 
