@@ -39,8 +39,7 @@ import UIKit
 
  Lastly components make accessible only the properties that need to be public (maybe none, with the `Configuration` approach), enhancing the [cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science)) of our implementation.
 
-
- # In summary:
+ In summary:
 
  - Lighter view controllers
  - Visual state changes via configuration object

@@ -27,6 +27,15 @@ public final class LoginViewController: UIViewController, LoginPresenterViewType
 
         self.component.render(configuration: configuration)
     }
+
+    public func navigateToHome() {
+
+        let homeViewController = HomeViewController()
+        let homePresenter = HomePresenter()
+        homeViewController.delegate = homePresenter
+        homePresenter.viewController = homeViewController
+        self.navigationController?.pushViewController(homeViewController, animated: true)
+    }
 }
 
 extension LoginViewController: LoginComponentDelegate {

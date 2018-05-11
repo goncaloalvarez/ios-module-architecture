@@ -1,9 +1,9 @@
 import UIKit
 import RxSwift
 
-public final class LoginViewController: UIViewController, LoginPresenterViewType {
+public final class LoginViewControllerDecoupled: UIViewController, LoginPresenterViewDecoupledType {
 
-    public weak var delegate: LoginPresenterType?
+    public weak var delegate: LoginPresenterDecoupledType?
 
     private lazy var component: LoginComponent = {
 
@@ -29,7 +29,7 @@ public final class LoginViewController: UIViewController, LoginPresenterViewType
     }
 }
 
-extension LoginViewController: LoginComponentDelegate {
+extension LoginViewControllerDecoupled: LoginComponentDelegate {
 
     func didSubmitLoginForm(email: String?, password: String?) {
 

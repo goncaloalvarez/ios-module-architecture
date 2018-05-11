@@ -25,7 +25,7 @@ import PlaygroundSupport
  The `Presenter` will have a reference back to the view controller to be able to change it's state. The property holding this reference will be named `viewController` for a better understanding. This same reference however will be exposed as a protocol as well, like we would do with a delegate. The view controller will implement that protocol and we will assign it to the presenter. As any other delegate property, the `viewController` property will be `weak`.
 
  One last thing we would like to do is call `delegate` the reference from the view controller to the presenter. It just seems more familiar to have a `delegate`, when working inside the view controller's code.
-*/
+ */
     let loginInteractor = LoginInteractor()
     let loginPresenter = LoginPresenter(loginInteractor: loginInteractor)
     let viewController = LoginViewController()
