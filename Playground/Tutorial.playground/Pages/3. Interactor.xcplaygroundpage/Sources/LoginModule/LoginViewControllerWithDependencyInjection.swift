@@ -52,7 +52,7 @@ extension LoginViewControllerWithDependencyInjection: LoginComponentDelegate {
 
         switch event {
         case .success(let user):
-            self.component.showLoggedInUser(user)
+            self.component.render(configuration: LoginConfiguration(title: "BRAND", user: user))
         case .error(let error):
             print(error)
         }

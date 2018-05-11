@@ -64,15 +64,12 @@ final class LoginComponent: UIView {
         self.titleLabel.attributedText = configuration.title
         self.emailTextField.text = configuration.email
         self.passwordTextField.text = configuration.email
+        print("rendering configuration: \(configuration)")
     }
 
     @objc private func submit() {
 
         self.delegate?.didSubmitLoginForm(email: self.emailTextField.text, password: self.passwordTextField.text)
-    }
-
-    public func showLoggedInUser(_ user: User) {
-        print(user)
     }
 }
 

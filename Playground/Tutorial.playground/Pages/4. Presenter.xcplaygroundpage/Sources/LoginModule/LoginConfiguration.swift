@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct LoginConfiguration {
+public struct LoginConfiguration {
 
     private let titleText: String
 

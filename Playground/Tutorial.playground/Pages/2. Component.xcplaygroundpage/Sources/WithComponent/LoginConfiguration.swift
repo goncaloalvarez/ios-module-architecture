@@ -9,6 +9,7 @@ struct LoginConfiguration {
     let password: String?
 
     var title: NSAttributedString {
+        
         let attirbutes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 40, weight: .light)]
         return NSAttributedString(string: self.titleText, attributes: attirbutes)
     }
