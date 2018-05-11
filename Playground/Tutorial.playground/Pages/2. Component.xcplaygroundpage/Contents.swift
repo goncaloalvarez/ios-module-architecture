@@ -1,11 +1,12 @@
+//: [Previous](@previous)
 import UIKit
 /*:
  # A Plain UIViewController
 
  We will get started with a simple Login screen with a plain old `UIViewController` subclass.
  */
-let viewController = LoginViewController()
-viewController.view.frame = iPhone7Size
+    let viewController = LoginViewController()
+    viewController.view.frame = iPhone7Size
 /*:
  The first thing we need to have in mind is that our view controllers are some of the classes most tied to the [iOS ecosystem](https://developer.apple.com/documentation/uikit/uiviewcontroller). They contain methods for handling:
 
@@ -46,6 +47,6 @@ viewController.view.frame = iPhone7Size
  - Better testability
  - Higher cohesion
  */
-
-let viewControllerWithComponent = LoginViewControllerWithComponent()
-viewControllerWithComponent.view.frame = iPhone7Size
+    let viewControllerWithComponent = LoginViewControllerWithComponent()
+    viewControllerWithComponent.view.frame = iPhone7Size
+//: [Next](@next)

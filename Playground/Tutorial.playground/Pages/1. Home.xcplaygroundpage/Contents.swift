@@ -1,4 +1,6 @@
 /*:
+ # Modular Architecture
+
  _This document is intended to be a guide on how the modular architecture works. It is highly inspired by the [Uber RIBs](https://github.com/uber/RIBs/wiki) architecture._
 
  If you want to go straight to the tutorials you can [get started in here](Component).
@@ -36,3 +38,4 @@
 
  To better understand all the concepts described, we developed some tutorials that will start from a plain `UIViewController` and will evolve justifying the need of every layer of the architecture until we get to a complex real life context. You can [get started in here](Component)
  */
+//: [Next](@next)

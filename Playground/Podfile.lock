@@ -1,9 +1,11 @@
 PODS:
   - ModuleArchitecture (0.11.0)
+  - RxSwift (4.1.2)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - ModuleArchitecture (from `../ModuleArchitecture.podspec`)
+  - RxSwift
   - SnapKit
 
 EXTERNAL SOURCES:
@@ -12,8 +14,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ModuleArchitecture: 49b77eadbb01be7b1dded3f7b61e062ec51bf284
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: ee4caa6f83eb2abaf7fd34715ff0ce53b1a6c4e5
+PODFILE CHECKSUM: 15e87fcc6d026696699990b1ffd7f1509ce64ea9
 
 COCOAPODS: 1.4.0
