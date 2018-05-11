@@ -22,7 +22,7 @@ import PlaygroundSupport
  */
     let viewController = LoginViewController()
     viewController.view.frame = iPhone7Size
-//    PlaygroundPage.current.liveView = viewController.view
+    //PlaygroundPage.current.liveView = viewController.view
 /*:
  # Dependency Injection
 
@@ -30,14 +30,27 @@ import PlaygroundSupport
 
  If we receive an instance of our interactor insetead of creating it ourselves inside `LoginViewController`, at the unit test we could pass another implementation of the same interactor type, a simpler implementation with expected returns so we can test every relevant context.
 
+ > _Receiving an instance instead of creating it also delegates this resposibility to another object and makes our view controller more cohesive to it's own business._
+
+
  We also want to be working with protocol types instead of real implementation types so this process is easier.
 
  That's how it would look like the same login controller injecting the interactor:
  */
     let interactor = LoginInteractor()
     let viewControllerWithDependencyInjection = LoginViewControllerWithDependencyInjection(loginInteractor: interactor)
-     PlaygroundPage.current.liveView = viewController.view
+    viewControllerWithDependencyInjection.view.frame = iPhone7Size
+    PlaygroundPage.current.liveView = viewControllerWithDependencyInjection.view
 /*:
  When we need to unit test our view controller, ignoring the complexity of the `LoginInteractor`, we can just create another implementation of the `LoginInteractorType` protocol and pass it when instantiating the controller.
+ 
+
+ ```swift
+final class FakeLoginInteractor: LoginInteractorType {
+    func loginWith(username: String, password: String) -> Single<User> {
+        // return something your unit tests expect
+    }
+}
+ ```
  */
 //: [Next](@next)
