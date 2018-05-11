@@ -43,7 +43,6 @@ import PlaygroundSupport
     PlaygroundPage.current.liveView = viewControllerWithDependencyInjection.view
 /*:
  When we need to unit test our view controller, ignoring the complexity of the `LoginInteractor`, we can just create another implementation of the `LoginInteractorType` protocol and pass it when instantiating the controller.
- 
 
  ```swift
 final class FakeLoginInteractor: LoginInteractorType {
@@ -52,5 +51,7 @@ final class FakeLoginInteractor: LoginInteractorType {
     }
 }
  ```
+
+ In our unit tests we can create a `LoginViewControllerWithDependencyInjection` and call the `didSubmitLoginForm(email:password:)`. We then expect that the interector method will be called, we can test that by implementing some check logic inside our fake interactor. And finally we expect that the component method `public func showLoggedInUser(_ user:)` is called. This last part we cannot still test, but we will get there.
  */
 //: [Next](@next)

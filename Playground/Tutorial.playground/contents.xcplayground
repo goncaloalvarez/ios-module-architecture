@@ -4,5 +4,6 @@
         <page name='1. Home'/>
         <page name='2. Component'/>
         <page name='3. Interactor'/>
+        <page name='4. Presenter'/>
     </pages>
 </playground>

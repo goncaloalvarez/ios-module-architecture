@@ -70,6 +70,10 @@ final class LoginComponent: UIView {
 
         self.delegate?.didSubmitLoginForm(email: self.emailTextField.text, password: self.passwordTextField.text)
     }
+
+    public func showLoggedInUser(_ user: User) {
+        print(user)
+    }
 }
 
 extension LoginComponent {

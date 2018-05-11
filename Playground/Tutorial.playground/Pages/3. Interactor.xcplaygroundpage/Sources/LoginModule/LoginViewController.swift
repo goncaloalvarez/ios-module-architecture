@@ -44,7 +44,7 @@ extension LoginViewController: LoginComponentDelegate {
 
         switch event {
         case .success(let user):
-            print(user)
+            self.component.showLoggedInUser(user)
         case .error(let error):
             print(error)
         }
